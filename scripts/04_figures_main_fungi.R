@@ -2,10 +2,10 @@
 # 04_figures_main_fungi.R
 # Purpose:
 #   Generate MAIN figures for culturable fungi (paper-ready):
-#   - Fig1: Mean class composition (%) by Management × Medium × Organ
-#   - Fig2: Exclusive/shared classes (Commercial vs Natural) by Organ × Management
-#   - Fig3: Delta richness (Natural - Commercial) by Organ, faceted by Management
-#   - Fig4: PCoA (Jaccard) using objects generated in 03_fungi_analysis.R
+#   - Fig5: Mean class composition (%) by Management × Medium × Organ
+#   - Fig6: Exclusive/shared classes (Commercial vs Natural) by Organ × Management
+#   - Fig7: Delta richness (Natural - Commercial) by Organ, faceted by Management
+#   - Fig8: PCoA (Jaccard) using objects generated in 03_fungi_analysis.R
 #
 # Inputs:
 #   data/processed/Hongos_withSampleID.csv
@@ -154,7 +154,7 @@ p_fig1 <- ggplot(plot_df1, aes(x = Organ, y = MeanFreq * 100, fill = Class_plot)
     legend.key.height = unit(0.55, "lines")
   )
 
-ggsave("outputs/figures/main/Fig1_FungalComposition.pdf",
+ggsave("outputs/figures/main/Fig5_FungalComposition.pdf",
        p_fig1, width = 10.2, height = 7.0, units = "in", device = cairo_pdf)
 
 # ======================================================================
@@ -210,7 +210,7 @@ p_fig2 <- ggplot(up_counts, aes(x = category, y = n, fill = Organ)) +
     axis.text.x = element_text(angle = 20, hjust = 1)
   )
 
-ggsave("outputs/figures/main/Fig2_ExclusiveSharedClasses_Fungi.pdf",
+ggsave("outputs/figures/main/Fig6_ExclusiveSharedClasses_Fungi.pdf",
        p_fig2, width = 18, height = 12, units = "cm", device = cairo_pdf)
 
 exclusive_classes_detailed <- wide %>%
@@ -299,7 +299,7 @@ p_fig3 <- ggplot(rich_df, aes(Organ, Delta, color = Organ)) +
     strip.text = element_text(face = "bold")
   )
 
-ggsave("outputs/figures/main/Fig3_DeltaRichness_Fungi.pdf",
+ggsave("outputs/figures/main/Fig7_DeltaRichness_Fungi.pdf",
        p_fig3, width = 8.5, height = 4.2, device = cairo_pdf)
 
 # ======================================================================
@@ -331,8 +331,9 @@ p_fig4 <- ggplot(ord, aes(PCoA1, PCoA2, color = Organ, shape = Management)) +
     shape = "Management"
   )
 
-ggsave("outputs/figures/main/Fig4_PCoA_Jaccard_Fungi.pdf",
+ggsave("outputs/figures/main/Fig8_PCoA_Jaccard_Fungi.pdf",
        p_fig4, width = 7.2, height = 5.2, device = cairo_pdf)
 
 message("Main fungi figures exported to outputs/figures/main/")
+
 
