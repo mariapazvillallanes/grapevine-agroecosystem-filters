@@ -13,10 +13,10 @@
 #   outputs/objects/fungi_pcoa_jaccard.rds
 #
 # Outputs (not tracked by git; outputs/ is ignored):
-#   outputs/figures/main/Fig1_FungalComposition.pdf
-#   outputs/figures/main/Fig2_ExclusiveSharedClasses_Fungi.pdf
-#   outputs/figures/main/Fig3_DeltaRichness_Fungi.pdf
-#   outputs/figures/main/Fig4_PCoA_Jaccard_Fungi.pdf
+#   outputs/figures/main/Fig5_FungalComposition.pdf
+#   outputs/figures/main/Fig6_ExclusiveSharedClasses_Fungi.pdf
+#   outputs/figures/main/Fig7_DeltaRichness_Fungi.pdf
+#   outputs/figures/main/Fig8_PCoA_Jaccard_Fungi.pdf
 #   outputs/tables/Table_S1_DeltaRichness_Fungi.csv
 #   outputs/tables/ExclusiveClasses_Detailed_Fungi.csv
 # ======================================================================
@@ -335,3 +335,4 @@ ggsave("outputs/figures/main/Fig4_PCoA_Jaccard_Fungi.pdf",
        p_fig4, width = 7.2, height = 5.2, device = cairo_pdf)
 
 message("Main fungi figures exported to outputs/figures/main/")
+
