@@ -1,8 +1,9 @@
-cff-version: 1.2.0
-message: If you use this repository, please cite it.
-title: Grapevine agroecosystem filters
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Villanueva
-    given-names: Maripaz
-repository-code: https://github.com/mariapazvillallanes/grapevine-agroecosystem-filters
-license: MIT
+- family-names: Villanueva
+  given-names: Maripaz
+orcid: https://orcid.org/0000-0001-7831-2643
+title: Grapevine agroecosystem filters
+version: v1.0.0
+date-released: 2026-02-13
