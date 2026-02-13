@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code, please cite it as below."
 title: ""Grapevine agroecosystem filters shape culturable microbial reservoirs""
 authors:
-  - family-names: Villanueva Llanes
+  - family-names: Villanueva
     given-names: Maripaz
 date-released: 2026-02-13
 repository-code: "https://github.com/TU_USUARIO/grapevine-agroecosystem-filters"
